@@ -1,5 +1,5 @@
-# VaporSimplePagtion-Sample
-## [VaporSimplePagtion - Github](https://github.com/mludi/VaporSimplePagination)
+# VaporSimplePagination-Sample
+## [VaporSimplePagination - Github](https://github.com/mludi/VaporSimplePagination)
 
 
 ## How to use
