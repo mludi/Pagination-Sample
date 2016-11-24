@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SiE-ql-W8F">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="mwr-YO-JYL">
+            <objects>
+                <tableViewController storyboardIdentifier="PostViewController" id="wIv-dO-k2Z" customClass="PostViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9YO-k5-RQp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="DCW-Rx-hnT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DCW-Rx-hnT" id="cxd-dj-hlC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="RQE-CN-S1s" customClass="LoadingCell" customModule="Client" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RQE-CN-S1s" id="uRG-Re-0vd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1uy-Ph-cde">
+                                            <rect key="frame" x="177.5" y="12" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1uy-Ph-cde" firstAttribute="centerX" secondItem="uRG-Re-0vd" secondAttribute="centerX" id="UOa-Tn-NL8"/>
+                                        <constraint firstItem="1uy-Ph-cde" firstAttribute="centerY" secondItem="uRG-Re-0vd" secondAttribute="centerY" id="f9d-WS-02y"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="indicator" destination="1uy-Ph-cde" id="N3G-nz-dN3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wIv-dO-k2Z" id="7ao-VJ-fep"/>
+                            <outlet property="delegate" destination="wIv-dO-k2Z" id="Uba-FV-gbk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jAc-YD-ZQ4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHu-Ks-Umk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="-12.143928035982009"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="exQ-kB-kvH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SiE-ql-W8F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NL3-AL-nu4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wIv-dO-k2Z" kind="relationship" relationship="rootViewController" id="aB9-41-dbV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owL-K8-q2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.79999999999995" y="-12.143928035982009"/>
+        </scene>
+        <!--Create Demo Data View Controller-->
+        <scene sceneID="Cqm-vF-vu3">
+            <objects>
+                <viewController storyboardIdentifier="CreateDemoDataViewController" id="IKN-3e-PAI" customClass="CreateDemoDataViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="THa-aI-P7h"/>
+                        <viewControllerLayoutGuide type="bottom" id="T4N-Z3-lfh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p9u-fw-W0O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-VF-y9f">
+                                <rect key="frame" x="124" y="318" width="126" height="30"/>
+                                <state key="normal" title="Create Demo Data"/>
+                                <connections>
+                                    <action selector="createDemoDataTouchUpInside:" destination="IKN-3e-PAI" eventType="touchUpInside" id="0MA-Tg-oFa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vl3-VF-y9f" firstAttribute="centerX" secondItem="p9u-fw-W0O" secondAttribute="centerX" id="7I8-1R-GOX"/>
+                            <constraint firstItem="Vl3-VF-y9f" firstAttribute="centerY" secondItem="p9u-fw-W0O" secondAttribute="centerY" id="SuH-3h-138"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEb-Rg-7ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="674"/>
+        </scene>
+    </scenes>
+</document>
