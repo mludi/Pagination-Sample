@@ -17,7 +17,6 @@ class CreateDemoDataViewController: UIViewController {
     // MARK: - Properties
     
     var delegate: CreateDemoDataViewControllerDelegate?
-    var bla: String?
     
     // MARK: - ButtonActions
     

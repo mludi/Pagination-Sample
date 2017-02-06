@@ -39,11 +39,11 @@ final class Webservice {
                         completionHandler(returnList, 0, 0, .noData)
                         return
                     }
-                    guard let theJSON = try? JSONSerialization.jsonObject(with: theData, options: []) as? JSONArray,
-                    let innerDict = theJSON?[0],
-                    let posts = innerDict["posts"] as? JSONArray,
-                    let totalPages = innerDict["total_pages"] as? Int,
-                    let totalPosts = innerDict["total"] as? Int
+                    guard let theJSON = try? JSONSerialization.jsonObject(with: theData, options: []) as? JSON,
+                    let json = theJSON,
+                    let posts = json["posts"] as? JSONArray,
+                    let totalPages = json["total_pages"] as? Int,
+                    let totalPosts = json["total"] as? Int
                         else {
                             completionHandler(returnList, 0, 0, .couldNotConvert)
                             return
